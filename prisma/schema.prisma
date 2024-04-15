@@ -17,19 +17,14 @@ model User {
   id       Int    @id @default(autoincrement())
   username String
   password String
-  // todos    Todo[]
+  userRole  String?
 }
 
-model Todo {
-  id          Int     @id @default(autoincrement())
-  title       String
-  description String?
-  date        String?
-  isCompleted Boolean @default(false)
-  isImportant Boolean @default(false)
-
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
-  userId    Int
-  // user        User    @relation(fields: [userId], references: [id])
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  category    String
+  price       Float
+  imageUrl    String?
 }
