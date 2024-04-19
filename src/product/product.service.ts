@@ -48,9 +48,9 @@ export class ProductService {
     return this.prisma.product.findMany({
       where: {
         OR: [
-          name && { name: { contains: lowercaseName } }, // Include name condition if name is provided
-          category && { category: { contains: lowercaseCategory } }, // Include category condition if category is provided
-        ].filter(Boolean), // Filter out undefined/null values
+          name && { name: { contains: lowercaseName } }, 
+          category && { category: { contains: lowercaseCategory } },
+        ].filter(Boolean),
       },
       skip,
       take: limit,

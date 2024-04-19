@@ -4,7 +4,6 @@ import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { SearchProductDto } from './dto/search-product.dto';
 import { PaginationDto } from './dto/pagination.dto';
-import { Product } from './product.entity';
 import { Request, Response } from 'express';
 
 @Controller('products')

@@ -1,6 +1,6 @@
 import { Prisma } from '@prisma/client';
 
-//product,model
+//product model
 export class Product implements Prisma.ProductUncheckedCreateInput {
   id?: number;
   name: string;
